@@ -1,32 +1,32 @@
 <?php
 
-    function menghitung($bilangan_pertama,$operasi,$bilangan_kedua){
+    function menghitung($bil1, $operasi, $bil2){
     
-        if($operasi=="+"){
-            $hasil  = $bilangan_pertama+$bilangan_kedua;
+        if($operasi == "+"){
+            $hasil = $bil1 + $bil2;
         }
-        else if($operasi=="-"){
-            $hasil  = $bilangan_pertama-$bilangan_kedua;
+        else if($operasi == "-"){
+            $hasil = $bil1 - $bil2;
         }
-        else if($operasi=="*"){
-            $hasil  = $bilangan_pertama*$bilangan_kedua;
+        else if($operasi == "*"){
+            $hasil = $bil1 * $bil2;
         }
-        else if($operasi=="/"){
-            $hasil  = $bilangan_pertama/$bilangan_kedua;
+        else if($operasi == "/"){
+            $hasil = $bil1 / $bil2;
         }
         else{
-            $hasil  = "Operasi Salah";
+            $hasil = "Operasi Salah";
         }
         
         return $hasil;
     }
     
-    $bilangan_pertama   = $_POST["bilangan_pertama"];
-    $operasi            = $_POST["operasi"];
-    $bilangan_kedua     = $_POST["bilangan_kedua"];
+    $bil1 = $_POST["bil1"];
+    $operasi = $_POST["operasi"];
+    $bil2 = $_POST["bil2"];
 
-    if(isset($_POST["aksi"])&&($_POST["aksi"]=="Hitung")){
-        $hasil          = menghitung($bilangan_pertama,$operasi,$bilangan_kedua);
+    if(isset($_POST["aksi"]) && ($_POST["aksi"] == "Hitung")){
+        $hasil = menghitung($bil1, $operasi, $bil2);
     }
     
 ?>
@@ -34,7 +34,7 @@
 <html>
     <head>
         <title>
-            Hasil
+            Hasil Perhitungan
         </title>
         <link rel="stylesheet" type="text/css" href="kalkulator.css">
     </head>
@@ -43,9 +43,9 @@
             Hasil Perhitungan
         </h1>
         <p>
-            <?php echo $bilangan_pertama;?>
+            <?php echo $bil1;?>
             <?php echo $operasi;?>
-            <?php echo $bilangan_kedua;?>
+            <?php echo $bil2;?>
             =
             <?php echo $hasil;?>
             <br>

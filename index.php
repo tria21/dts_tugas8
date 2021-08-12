@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>
-            Kalkulator
+            Kalkulator Sederhana
         </h1>
         <form action="hasil.php" method="post">
             <table class="kalkulator">
@@ -20,7 +20,7 @@
                         :
                     </td>
                     <td>
-                        <input type="text" name="bilangan_pertama">
+                        <input type="text" name="bil1">
                     </td>
                 </tr>
                 <tr>
@@ -47,7 +47,7 @@
                         :
                     </td>
                     <td>
-                        <input type="text" name="bilangan_kedua">
+                        <input type="text" name="bil2">
                     </td>
                 </tr>
                 <tr>
